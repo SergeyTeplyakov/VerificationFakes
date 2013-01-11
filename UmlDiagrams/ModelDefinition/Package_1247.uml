@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="39a1935e-b934-427c-9d02-7b8f347d9fb7"
+  name="Microsoft.QualityTools.Testing.Fakes.Stubs" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="d5eb4b73-36e3-4730-937d-b5a09fd30d32">
+      <body>From Microsoft Fakes framework.</body>
+      <annotatedElements>
+        <classMoniker
+          Id="be24ea71-fc43-4636-88a6-e979a979977e"
+          LastKnownName="StubBase"
+          LastKnownLocation="Package_1247.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="be24ea71-fc43-4636-88a6-e979a979977e"
+        name="StubBase"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature
+            Id="187722e2-9aee-4877-aa04-e4cb7675bcdd"
+            parameters=""
+            isLeaf="false">
+            <ownedParameters>
+              <classifierTemplateParameter
+                Id="b31f875f-d528-4599-942a-980b622d2c45">
+                <ownedParameterableElement>
+                  <class
+                    Id="78f87c3d-17c6-496d-a621-b567fb55df2e"
+                    name="T"
+                    isAbstract="false"
+                    isLeaf="false"
+                    isActiveClass="false" />
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

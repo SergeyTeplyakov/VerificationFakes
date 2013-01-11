@@ -1,0 +1,41 @@
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate stub for FakeMocks.IErrorFormatter: type is not visible to exported or assembly(FakeMocks.Fakes).
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate stub for FakeMocks.ErrorFormatter: type is not visible to exported or assembly(FakeMocks.Fakes).
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate stub for FakeMocks.ArgumentValue: type is not visible to exported or assembly(FakeMocks.Fakes).
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate stub for FakeMocks.AnyArgumentValue: type is sealed.
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate stub for FakeMocks.ExpectedCall: type is not visible to exported or assembly(FakeMocks.Fakes).
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate stub for FakeMocks.ExpressionsParser: type is not visible to exported or assembly(FakeMocks.Fakes).
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate stub for FakeMocks.RangeBuilder: type is not visible to exported or assembly(FakeMocks.Fakes).
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate stub for FakeMocks.It: type is sealed.
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate stub for FakeMocks.Mode: type is a value type.
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate stub for FakeMocks.Range: type is sealed.
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate stub for FakeMocks.RangeArgumentValue: type is sealed.
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate stub for FakeMocks.SingleArgumentValue: type is sealed.
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate stub for FakeMocks.Times: type is sealed.
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate stub for FakeMocks.ObservedCallsEx: type is sealed.
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate stub for FakeMocks.ObservedCall: type is sealed.
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate stub for FakeMocks.StubBaseEx: type is sealed.
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate stub for FakeMocks.VerificationException: type is sealed.
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate stub for FakeMocks.Verificator: type is not visible to exported or assembly(FakeMocks.Fakes).
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate stub for <>f__AnonymousType0`2: type is sealed.
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate stub for System.Diagnostics.Contracts.__ContractsRuntime: type is sealed.
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate stub for System.Diagnostics.Contracts.RuntimeContractsFlags: type is a value type.
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate stub for System.Diagnostics.Contracts.RuntimeContractsAttribute: type is sealed.
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate shim for FakeMocks.IErrorFormatter: type is an interface.
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate shim for FakeMocks.ErrorFormatter: type is not visible to exported or assembly(FakeMocks.Fakes).
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate shim for FakeMocks.ArgumentValue: type is not visible to exported or assembly(FakeMocks.Fakes).
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate shim for FakeMocks.AnyArgumentValue: type is not visible to exported or assembly(FakeMocks.Fakes).
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate shim for FakeMocks.ExpectedCall: type is not visible to exported or assembly(FakeMocks.Fakes).
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate shim for FakeMocks.ExpressionsParser: type is not visible to exported or assembly(FakeMocks.Fakes).
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate shim for FakeMocks.RangeBuilder: type is not visible to exported or assembly(FakeMocks.Fakes).
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate shim for FakeMocks.Mode: type is an enum.
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate shim for FakeMocks.Range: type is not visible to exported or assembly(FakeMocks.Fakes).
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate shim for FakeMocks.RangeArgumentValue: type is not visible to exported or assembly(FakeMocks.Fakes).
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate shim for FakeMocks.SingleArgumentValue: type is not visible to exported or assembly(FakeMocks.Fakes).
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate shim for FakeMocks.ObservedCallsEx: type is not visible to exported or assembly(FakeMocks.Fakes).
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate shim for FakeMocks.ObservedCall: type is not visible to exported or assembly(FakeMocks.Fakes).
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate shim for FakeMocks.Samples.ILogWriter: type is an interface.
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate shim for FakeMocks.Verificator: type is not visible to exported or assembly(FakeMocks.Fakes).
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate shim for <>f__AnonymousType0`2: type is not supported because of internal limitations.
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate shim for System.Diagnostics.Contracts.__ContractsRuntime: type is not supported because of internal limitations.
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate shim for System.Diagnostics.Contracts.RuntimeContractsFlags: type is an enum.
+D:\Sources\Projects\FakeMock\FakeMockTests\Fakes\FakeMocks.fakes : warning : Cannot generate shim for System.Diagnostics.Contracts.RuntimeContractsAttribute: type is not visible to exported or assembly(FakeMocks.Fakes).

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B0712FC3-7191-4062-8CAD-F8A275FF49C6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VerificationFakesTests</RootNamespace>
+    <AssemblyName>VerificationFakes.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=11.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Xml" />
+    <Reference Include="VerificationFakes.Samples.Fakes">
+      <HintPath>FakesAssemblies\VerificationFakes.Samples.Fakes.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\CSharpNameConverterTests.cs" />
+    <Compile Include="Core\ErrorFormatterTests.cs" />
+    <Compile Include="Core\Expected\ArgumentValues\AnyArgumentValueTests.cs" />
+    <Compile Include="Core\Expected\ArgumentValues\ExpressionArgumentValueTests.cs" />
+    <Compile Include="Core\Expected\ExpressionParser\ArgumentExpressionsParserTests.cs" />
+    <Compile Include="Core\Expected\ExpressionParser\ExpressionsParserTests.cs" />
+    <Compile Include="Core\Expected\ExpressionParser\IAdvancedLogger.cs" />
+    <Compile Include="Core\Expected\ExpressionParser\ILogger.cs" />
+    <Compile Include="Core\Expected\ArgumentValues\SingleValueTests.cs" />
+    <Compile Include="Core\ExpressionsPrinterTests.cs" />
+    <Compile Include="MockTests\MockFuncsParametrizedTests.cs" />
+    <Compile Include="MockTests\FluentTestCaseBuilder.cs" />
+    <Compile Include="MockTests\MockActionsParametrizedTests.cs" />
+    <Compile Include="MockTests\MockSetupTests.cs" />
+    <Compile Include="MockTests\MockTests.cs" />
+    <Compile Include="MockTests\StrictModeTests.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Core\Expected\ArgumentValues\RangeArgumentValueTests.cs" />
+    <Compile Include="Core\Expected\ArgumentValues\RangeTests.cs" />
+    <Compile Include="StubObserverTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\VerificationFakes.Samples\VerificationFakes.Samples.csproj">
+      <Project>{85fe1323-5ecf-488f-b429-f75598b6991e}</Project>
+      <Name>VerificationFakes.Samples</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\VerificationFakes\VerificationFakes.csproj">
+      <Project>{55cd643a-e464-4377-8f9f-1a92930a2abf}</Project>
+      <Name>VerificationFakes</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Fakes Include="Core\Fakes\VerificationFakes.Samples.fakes" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

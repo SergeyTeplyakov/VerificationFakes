@@ -1,0 +1,266 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FakeMocks.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:FakeMocks.Fakes.ShimIt">
+            <summary>Shim type of FakeMocks.It</summary>
+        </member>
+        <member name="M:FakeMocks.Fakes.ShimIt.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:FakeMocks.Fakes.ShimIt.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FakeMocks.Fakes.ShimIt.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FakeMocks.Fakes.ShimIt.IsAnyOf1``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{``0})">
+            <summary>Sets the shim of It.IsAny()</summary>
+        </member>
+        <member name="M:FakeMocks.Fakes.ShimIt.IsInRangeOf1M0M0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{``0,``0,``0})">
+            <summary>Sets the shim of It.IsInRange(!!0 from, !!0 to)</summary>
+        </member>
+        <member name="M:FakeMocks.Fakes.ShimIt.IsOf1ExpressionOfFuncOfM0Boolean``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},``0})">
+            <summary>Sets the shim of It.Is(Expression`1&lt;Func`2&lt;!!0,Boolean&gt;&gt; expression)</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.ShimIt.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:FakeMocks.Fakes.ShimMock`1">
+            <summary>Shim type of FakeMocks.Mock`1</summary>
+        </member>
+        <member name="M:FakeMocks.Fakes.ShimMock`1.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:FakeMocks.Fakes.ShimMock`1.#ctor(FakeMocks.Mock{`0})">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:FakeMocks.Fakes.ShimMock`1.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FakeMocks.Fakes.ShimMock`1.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.ShimMock`1.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.ShimMock`1.ConstructorStubBaseOfT0">
+            <summary>Sets the shim of Mock`1.Mock`1(StubBase`1&lt;!0&gt; stub)</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.ShimMock`1.VerifyExpressionOfActionOfT0">
+            <summary>Sets the shim of Mock`1.Verify(Expression`1&lt;Action`1&lt;!0&gt;&gt; expression)</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.ShimMock`1.VerifyExpressionOfActionOfT0Times">
+            <summary>Sets the shim of Mock`1.Verify(Expression`1&lt;Action`1&lt;!0&gt;&gt; expression, Times times)</summary>
+        </member>
+        <member name="T:FakeMocks.Fakes.ShimMock`1.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.ShimMock`1.AllInstances.VerifyExpressionOfActionOfT0">
+            <summary>Sets the shim of Mock`1.Verify(Expression`1&lt;Action`1&lt;!0&gt;&gt; expression)</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.ShimMock`1.AllInstances.VerifyExpressionOfActionOfT0Times">
+            <summary>Sets the shim of Mock`1.Verify(Expression`1&lt;Action`1&lt;!0&gt;&gt; expression, Times times)</summary>
+        </member>
+        <member name="T:FakeMocks.Fakes.ShimStubBaseEx">
+            <summary>Shim type of FakeMocks.StubBaseEx</summary>
+        </member>
+        <member name="M:FakeMocks.Fakes.ShimStubBaseEx.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:FakeMocks.Fakes.ShimStubBaseEx.AsMockOf1StubBaseOfM0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{Microsoft.QualityTools.Testing.Fakes.Stubs.StubBase{``0},FakeMocks.Mock{``0}})">
+            <summary>Sets the shim of StubBaseEx.AsMock(StubBase`1&lt;!!0&gt; stub)</summary>
+        </member>
+        <member name="M:FakeMocks.Fakes.ShimStubBaseEx.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FakeMocks.Fakes.ShimStubBaseEx.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.ShimStubBaseEx.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:FakeMocks.Fakes.ShimTimes">
+            <summary>Shim type of FakeMocks.Times</summary>
+        </member>
+        <member name="M:FakeMocks.Fakes.ShimTimes.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:FakeMocks.Fakes.ShimTimes.#ctor(FakeMocks.Times)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:FakeMocks.Fakes.ShimTimes.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FakeMocks.Fakes.ShimTimes.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.ShimTimes.AtLeastInt32">
+            <summary>Sets the shim of Times.AtLeast(Int32 times)</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.ShimTimes.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.ShimTimes.EqualityOpTimesTimes">
+            <summary>Sets the shim of Times.op_Equality(Times left, Times right)</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.ShimTimes.EqualsObject">
+            <summary>Sets the shim of Times.Equals(Object obj)</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.ShimTimes.EqualsTimes">
+            <summary>Sets the shim of Times.Equals(Times other)</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.ShimTimes.ExactlyInt32">
+            <summary>Sets the shim of Times.Exactly(Int32 times)</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.ShimTimes.GetHashCode">
+            <summary>Sets the shim of Times.GetHashCode()</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.ShimTimes.InequalityOpTimesTimes">
+            <summary>Sets the shim of Times.op_Inequality(Times left, Times right)</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.ShimTimes.MatchInt32">
+            <summary>Sets the shim of Times.Match(Int32 value)</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.ShimTimes.Never">
+            <summary>Sets the shim of Times.Never()</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.ShimTimes.Once">
+            <summary>Sets the shim of Times.Once()</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.ShimTimes.ToString">
+            <summary>Sets the shim of Times.ToString()</summary>
+        </member>
+        <member name="T:FakeMocks.Fakes.ShimTimes.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.ShimTimes.AllInstances.EqualsObject">
+            <summary>Sets the shim of Times.Equals(Object obj)</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.ShimTimes.AllInstances.EqualsTimes">
+            <summary>Sets the shim of Times.Equals(Times other)</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.ShimTimes.AllInstances.GetHashCode01">
+            <summary>Sets the shim of Times.GetHashCode()</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.ShimTimes.AllInstances.MatchInt32">
+            <summary>Sets the shim of Times.Match(Int32 value)</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.ShimTimes.AllInstances.ToString01">
+            <summary>Sets the shim of Times.ToString()</summary>
+        </member>
+        <member name="T:FakeMocks.Fakes.ShimVerificationException">
+            <summary>Shim type of FakeMocks.VerificationException</summary>
+        </member>
+        <member name="M:FakeMocks.Fakes.ShimVerificationException.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:FakeMocks.Fakes.ShimVerificationException.#ctor(FakeMocks.VerificationException)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:FakeMocks.Fakes.ShimVerificationException.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FakeMocks.Fakes.ShimVerificationException.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FakeMocks.Fakes.ShimVerificationException.Bind(System.Runtime.Serialization.ISerializable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.ShimVerificationException.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.ShimVerificationException.ConstructorString">
+            <summary>Sets the shim of VerificationException.VerificationException(String message)</summary>
+        </member>
+        <member name="T:FakeMocks.Fakes.ShimVerificationException.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:FakeMocks.Fakes.StubMock`1">
+            <summary>Stub type of FakeMocks.Mock`1</summary>
+        </member>
+        <member name="M:FakeMocks.Fakes.StubMock`1.#ctor(Microsoft.QualityTools.Testing.Fakes.Stubs.StubBase{`0})">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:FakeMocks.Fakes.StubMock`1.InitializeStub">
+            <summary>Initializes a new instance of type StubMock</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.StubMock`1.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.StubMock`1.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:FakeMocks.Fakes.StubMock`1.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:FakeMocks.Samples.Fakes.ShimLogger">
+            <summary>Shim type of FakeMocks.Samples.Logger</summary>
+        </member>
+        <member name="M:FakeMocks.Samples.Fakes.ShimLogger.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:FakeMocks.Samples.Fakes.ShimLogger.#ctor(FakeMocks.Samples.Logger)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:FakeMocks.Samples.Fakes.ShimLogger.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FakeMocks.Samples.Fakes.ShimLogger.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:FakeMocks.Samples.Fakes.ShimLogger.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:FakeMocks.Samples.Fakes.ShimLogger.ConstructorILogWriter">
+            <summary>Sets the shim of Logger.Logger(ILogWriter logWriter)</summary>
+        </member>
+        <member name="P:FakeMocks.Samples.Fakes.ShimLogger.WriteString">
+            <summary>Sets the shim of Logger.Write(String message)</summary>
+        </member>
+        <member name="T:FakeMocks.Samples.Fakes.ShimLogger.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:FakeMocks.Samples.Fakes.ShimLogger.AllInstances.WriteString">
+            <summary>Sets the shim of Logger.Write(String message)</summary>
+        </member>
+        <member name="T:FakeMocks.Samples.Fakes.StubILogWriter">
+            <summary>Stub type of FakeMocks.Samples.ILogWriter</summary>
+        </member>
+        <member name="M:FakeMocks.Samples.Fakes.StubILogWriter.#ctor">
+            <summary>Initializes a new instance of type StubILogWriter</summary>
+        </member>
+        <member name="M:FakeMocks.Samples.Fakes.StubILogWriter.fm::FakeMocks#Samples#ILogWriter#Write(System.Int32)">
+            <summary>Sets the stub of ILogWriter.Write(Int32 value)</summary>
+        </member>
+        <member name="M:FakeMocks.Samples.Fakes.StubILogWriter.fm::FakeMocks#Samples#ILogWriter#Write(System.String)">
+            <summary>Sets the stub of ILogWriter.Write(String message)</summary>
+        </member>
+        <member name="F:FakeMocks.Samples.Fakes.StubILogWriter.WriteInt32">
+            <summary>Sets the stub of ILogWriter.Write(Int32 value)</summary>
+        </member>
+        <member name="F:FakeMocks.Samples.Fakes.StubILogWriter.WriteString">
+            <summary>Sets the stub of ILogWriter.Write(String message)</summary>
+        </member>
+        <member name="T:FakeMocks.Samples.Fakes.StubLogger">
+            <summary>Stub type of FakeMocks.Samples.Logger</summary>
+        </member>
+        <member name="M:FakeMocks.Samples.Fakes.StubLogger.#ctor(FakeMocks.Samples.ILogWriter)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:FakeMocks.Samples.Fakes.StubLogger.InitializeStub">
+            <summary>Initializes a new instance of type StubLogger</summary>
+        </member>
+        <member name="P:FakeMocks.Samples.Fakes.StubLogger.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:FakeMocks.Samples.Fakes.StubLogger.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:FakeMocks.Samples.Fakes.StubLogger.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+    </members>
+</doc>

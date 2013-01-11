@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>VerificationFakes.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:VerificationFakes.Fakes.ShimIt">
+            <summary>Shim type of VerificationFakes.It</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimIt.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimIt.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimIt.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimIt.IsAnyOf1``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{``0})">
+            <summary>Sets the shim of It.IsAny()</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimIt.IsInRangeOf1M0M0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{``0,``0,``0})">
+            <summary>Sets the shim of It.IsInRange(!!0 from, !!0 to)</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimIt.IsOf1ExpressionOfFuncOfM0Boolean``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}},``0})">
+            <summary>Sets the shim of It.Is(Expression`1&lt;Func`2&lt;!!0,Boolean&gt;&gt; expression)</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimIt.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:VerificationFakes.Fakes.ShimMock`1">
+            <summary>Shim type of VerificationFakes.Mock`1</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimMock`1.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimMock`1.#ctor(VerificationFakes.Mock{`0})">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimMock`1.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimMock`1.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimMock`1.SetupOf1ExpressionOfFuncOfT0M0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{System.Linq.Expressions.Expression{System.Func{`0,``0}}})">
+            <summary>Sets the shim of Mock`1.Setup(Expression`1&lt;Func`2&lt;!0,!!0&gt;&gt; expression)</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimMock`1.SetupOf1ExpressionOfFuncOfT0M0Times``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{System.Linq.Expressions.Expression{System.Func{`0,``0}},VerificationFakes.Times})">
+            <summary>Sets the shim of Mock`1.Setup(Expression`1&lt;Func`2&lt;!0,!!0&gt;&gt; expression, Times times)</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimMock`1.VerifyOf1ExpressionOfFuncOfT0M0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{System.Linq.Expressions.Expression{System.Func{`0,``0}}})">
+            <summary>Sets the shim of Mock`1.Verify(Expression`1&lt;Func`2&lt;!0,!!0&gt;&gt; expression)</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimMock`1.VerifyOf1ExpressionOfFuncOfT0M0Times``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{System.Linq.Expressions.Expression{System.Func{`0,``0}},VerificationFakes.Times})">
+            <summary>Sets the shim of Mock`1.Verify(Expression`1&lt;Func`2&lt;!0,!!0&gt;&gt; expression, Times times)</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimMock`1.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimMock`1.ConstructorStubBaseOfT0">
+            <summary>Sets the shim of Mock`1.Mock`1(StubBase`1&lt;!0&gt; stub)</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimMock`1.SetupExpressionOfActionOfT0">
+            <summary>Sets the shim of Mock`1.Setup(Expression`1&lt;Action`1&lt;!0&gt;&gt; expression)</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimMock`1.SetupExpressionOfActionOfT0Times">
+            <summary>Sets the shim of Mock`1.Setup(Expression`1&lt;Action`1&lt;!0&gt;&gt; expression, Times times)</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimMock`1.VerifyAll">
+            <summary>Sets the shim of Mock`1.VerifyAll()</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimMock`1.VerifyExpressionOfActionOfT0">
+            <summary>Sets the shim of Mock`1.Verify(Expression`1&lt;Action`1&lt;!0&gt;&gt; expression)</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimMock`1.VerifyExpressionOfActionOfT0Times">
+            <summary>Sets the shim of Mock`1.Verify(Expression`1&lt;Action`1&lt;!0&gt;&gt; expression, Times times)</summary>
+        </member>
+        <member name="T:VerificationFakes.Fakes.ShimMock`1.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimMock`1.AllInstances.SetupOf1ExpressionOfFuncOfT0M0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{VerificationFakes.Mock{`0},System.Linq.Expressions.Expression{System.Func{`0,``0}}})">
+            <summary>Sets the shim of Mock`1.Setup(Expression`1&lt;Func`2&lt;!0,!!0&gt;&gt; expression)</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimMock`1.AllInstances.SetupOf1ExpressionOfFuncOfT0M0Times``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{VerificationFakes.Mock{`0},System.Linq.Expressions.Expression{System.Func{`0,``0}},VerificationFakes.Times})">
+            <summary>Sets the shim of Mock`1.Setup(Expression`1&lt;Func`2&lt;!0,!!0&gt;&gt; expression, Times times)</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimMock`1.AllInstances.VerifyOf1ExpressionOfFuncOfT0M0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{VerificationFakes.Mock{`0},System.Linq.Expressions.Expression{System.Func{`0,``0}}})">
+            <summary>Sets the shim of Mock`1.Verify(Expression`1&lt;Func`2&lt;!0,!!0&gt;&gt; expression)</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimMock`1.AllInstances.VerifyOf1ExpressionOfFuncOfT0M0Times``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{VerificationFakes.Mock{`0},System.Linq.Expressions.Expression{System.Func{`0,``0}},VerificationFakes.Times})">
+            <summary>Sets the shim of Mock`1.Verify(Expression`1&lt;Func`2&lt;!0,!!0&gt;&gt; expression, Times times)</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimMock`1.AllInstances.SetupExpressionOfActionOfT0">
+            <summary>Sets the shim of Mock`1.Setup(Expression`1&lt;Action`1&lt;!0&gt;&gt; expression)</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimMock`1.AllInstances.SetupExpressionOfActionOfT0Times">
+            <summary>Sets the shim of Mock`1.Setup(Expression`1&lt;Action`1&lt;!0&gt;&gt; expression, Times times)</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimMock`1.AllInstances.VerifyAll">
+            <summary>Sets the shim of Mock`1.VerifyAll()</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimMock`1.AllInstances.VerifyExpressionOfActionOfT0">
+            <summary>Sets the shim of Mock`1.Verify(Expression`1&lt;Action`1&lt;!0&gt;&gt; expression)</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimMock`1.AllInstances.VerifyExpressionOfActionOfT0Times">
+            <summary>Sets the shim of Mock`1.Verify(Expression`1&lt;Action`1&lt;!0&gt;&gt; expression, Times times)</summary>
+        </member>
+        <member name="T:VerificationFakes.Fakes.ShimStubBaseEx">
+            <summary>Shim type of VerificationFakes.StubBaseEx</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimStubBaseEx.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimStubBaseEx.AsMockOf1StubBaseOfM0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{Microsoft.QualityTools.Testing.Fakes.Stubs.StubBase{``0},VerificationFakes.Mock{``0}})">
+            <summary>Sets the shim of StubBaseEx.AsMock(StubBase`1&lt;!!0&gt; stub)</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimStubBaseEx.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimStubBaseEx.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimStubBaseEx.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="T:VerificationFakes.Fakes.ShimTimes">
+            <summary>Shim type of VerificationFakes.Times</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimTimes.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimTimes.#ctor(VerificationFakes.Times)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimTimes.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimTimes.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimTimes.AtLeastInt32">
+            <summary>Sets the shim of Times.AtLeast(Int32 times)</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimTimes.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimTimes.EqualityOpTimesTimes">
+            <summary>Sets the shim of Times.op_Equality(Times left, Times right)</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimTimes.EqualsObject">
+            <summary>Sets the shim of Times.Equals(Object obj)</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimTimes.EqualsTimes">
+            <summary>Sets the shim of Times.Equals(Times other)</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimTimes.ExactlyInt32">
+            <summary>Sets the shim of Times.Exactly(Int32 times)</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimTimes.GetHashCode">
+            <summary>Sets the shim of Times.GetHashCode()</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimTimes.InequalityOpTimesTimes">
+            <summary>Sets the shim of Times.op_Inequality(Times left, Times right)</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimTimes.MatchInt32">
+            <summary>Sets the shim of Times.Match(Int32 value)</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimTimes.Never">
+            <summary>Sets the shim of Times.Never()</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimTimes.Once">
+            <summary>Sets the shim of Times.Once()</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimTimes.ToString">
+            <summary>Sets the shim of Times.ToString()</summary>
+        </member>
+        <member name="T:VerificationFakes.Fakes.ShimTimes.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimTimes.AllInstances.EqualsObject">
+            <summary>Sets the shim of Times.Equals(Object obj)</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimTimes.AllInstances.EqualsTimes">
+            <summary>Sets the shim of Times.Equals(Times other)</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimTimes.AllInstances.GetHashCode01">
+            <summary>Sets the shim of Times.GetHashCode()</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimTimes.AllInstances.MatchInt32">
+            <summary>Sets the shim of Times.Match(Int32 value)</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimTimes.AllInstances.ToString01">
+            <summary>Sets the shim of Times.ToString()</summary>
+        </member>
+        <member name="T:VerificationFakes.Fakes.ShimVerificationException">
+            <summary>Shim type of VerificationFakes.VerificationException</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimVerificationException.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimVerificationException.#ctor(VerificationFakes.VerificationException)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimVerificationException.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimVerificationException.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.ShimVerificationException.Bind(System.Runtime.Serialization.ISerializable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimVerificationException.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.ShimVerificationException.ConstructorString">
+            <summary>Sets the shim of VerificationException.VerificationException(String message)</summary>
+        </member>
+        <member name="T:VerificationFakes.Fakes.ShimVerificationException.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:VerificationFakes.Fakes.StubMock`1">
+            <summary>Stub type of VerificationFakes.Mock`1</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.StubMock`1.#ctor(Microsoft.QualityTools.Testing.Fakes.Stubs.StubBase{`0})">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:VerificationFakes.Fakes.StubMock`1.InitializeStub">
+            <summary>Initializes a new instance of type StubMock</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.StubMock`1.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.StubMock`1.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:VerificationFakes.Fakes.StubMock`1.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:VerificationFakes.Samples.Fakes.StubILogWriter">
+            <summary>Stub type of VerificationFakes.Samples.ILogWriter</summary>
+        </member>
+        <member name="M:VerificationFakes.Samples.Fakes.StubILogWriter.#ctor">
+            <summary>Initializes a new instance of type StubILogWriter</summary>
+        </member>
+        <member name="M:VerificationFakes.Samples.Fakes.StubILogWriter.vf::VerificationFakes#Samples#ILogWriter#Write(System.Int32)">
+            <summary>Sets the stub of ILogWriter.Write(Int32 value)</summary>
+        </member>
+        <member name="M:VerificationFakes.Samples.Fakes.StubILogWriter.vf::VerificationFakes#Samples#ILogWriter#Write(System.String)">
+            <summary>Sets the stub of ILogWriter.Write(String message)</summary>
+        </member>
+        <member name="M:VerificationFakes.Samples.Fakes.StubILogWriter.vf::VerificationFakes#Samples#ILogWriter#Write(System.Int32,System.String)">
+            <summary>Sets the stub of ILogWriter.Write(Int32 value1, String value2)</summary>
+        </member>
+        <member name="M:VerificationFakes.Samples.Fakes.StubILogWriter.vf::VerificationFakes#Samples#ILogWriter#WriteR(System.String)">
+            <summary>Sets the stub of ILogWriter.WriteR(String message)</summary>
+        </member>
+        <member name="M:VerificationFakes.Samples.Fakes.StubILogWriter.vf::VerificationFakes#Samples#ILogWriter#WriteR(System.Int32)">
+            <summary>Sets the stub of ILogWriter.WriteR(Int32 value)</summary>
+        </member>
+        <member name="M:VerificationFakes.Samples.Fakes.StubILogWriter.vf::VerificationFakes#Samples#ILogWriter#WriteR(System.Int32,System.String)">
+            <summary>Sets the stub of ILogWriter.WriteR(Int32 value1, String value2)</summary>
+        </member>
+        <member name="F:VerificationFakes.Samples.Fakes.StubILogWriter.WriteInt32">
+            <summary>Sets the stub of ILogWriter.Write(Int32 value)</summary>
+        </member>
+        <member name="F:VerificationFakes.Samples.Fakes.StubILogWriter.WriteInt32String">
+            <summary>Sets the stub of ILogWriter.Write(Int32 value1, String value2)</summary>
+        </member>
+        <member name="F:VerificationFakes.Samples.Fakes.StubILogWriter.WriteRInt32">
+            <summary>Sets the stub of ILogWriter.WriteR(Int32 value)</summary>
+        </member>
+        <member name="F:VerificationFakes.Samples.Fakes.StubILogWriter.WriteRInt32String">
+            <summary>Sets the stub of ILogWriter.WriteR(Int32 value1, String value2)</summary>
+        </member>
+        <member name="F:VerificationFakes.Samples.Fakes.StubILogWriter.WriteRString">
+            <summary>Sets the stub of ILogWriter.WriteR(String message)</summary>
+        </member>
+        <member name="F:VerificationFakes.Samples.Fakes.StubILogWriter.WriteString">
+            <summary>Sets the stub of ILogWriter.Write(String message)</summary>
+        </member>
+    </members>
+</doc>

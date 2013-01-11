@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FakeMock.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:FakeMock.Fakes.ShimMock">
+            <summary>Shim type of FakeMock.Mock</summary>
+        </member>
+        <member name="M:FakeMock.Fakes.ShimMock.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:FakeMock.Fakes.ShimMock.#ctor(FakeMock.Mock)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:FakeMock.Fakes.ShimMock.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FakeMock.Fakes.ShimMock.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:FakeMock.Fakes.ShimMock.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:FakeMock.Fakes.ShimMock.Constructor">
+            <summary>Sets the shim of Mock.Mock()</summary>
+        </member>
+        <member name="T:FakeMock.Fakes.ShimMock.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="T:FakeMock.Fakes.StubMock">
+            <summary>Stub type of FakeMock.Mock</summary>
+        </member>
+        <member name="M:FakeMock.Fakes.StubMock.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:FakeMock.Fakes.StubMock.InitializeStub">
+            <summary>Initializes a new instance of type StubMock</summary>
+        </member>
+        <member name="P:FakeMock.Fakes.StubMock.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:FakeMock.Fakes.StubMock.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:FakeMock.Fakes.StubMock.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+    </members>
+</doc>
