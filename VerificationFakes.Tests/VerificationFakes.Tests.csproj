@@ -46,7 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\Actual\FakeActualCallsObserverTest.cs" />
+    <Compile Include="Core\Actual\FakesCustomObserverTests.cs" />
     <Compile Include="Core\CSharpNameConverterTests.cs" />
     <Compile Include="Core\ErrorFormatterTests.cs" />
     <Compile Include="Core\Expected\ArgumentValues\AnyArgumentValueTests.cs" />

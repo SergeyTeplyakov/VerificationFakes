@@ -108,6 +108,7 @@
   <ItemGroup>
     <Compile Include="Core\Actual\FakesCustomStubObserver.cs" />
     <Compile Include="Core\Actual\ICustomStubObserver.cs" />
+    <Compile Include="Core\Actual\MethodCalledEventArgs.cs" />
     <Compile Include="Core\ErrorFormatter.cs" />
     <Compile Include="Core\Expected\ArgumentValues\AnyArgumentValue.cs" />
     <Compile Include="Core\Expected\ArgumentValues\ArgumentValue.cs" />

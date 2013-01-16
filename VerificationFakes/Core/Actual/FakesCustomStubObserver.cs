@@ -31,7 +31,7 @@ namespace VerificationFakes.Core
             }
         }
 
-        public event EventHandler<MethodCallsEventArgs> MethodCalled;
+        public event EventHandler<MethodCalledEventArgs> MethodCalled;
 
         void IStubObserver.Enter(Type stubbedType, Delegate stubCall)
         {
@@ -73,7 +73,7 @@ namespace VerificationFakes.Core
             SynchronizedAdd(stubbedType, stubCall, args);
         }
 
-        private void OnMethodCalled(MethodCallsEventArgs e)
+        private void OnMethodCalled(MethodCalledEventArgs e)
         {
             var handler = MethodCalled;
             if (handler != null) 
@@ -89,7 +89,7 @@ namespace VerificationFakes.Core
                 _observedCalls.Add(observedCall);
             }
 
-            OnMethodCalled(new MethodCallsEventArgs(observedCall.StubbedMethod, observedCall.GetArguments()));
+            OnMethodCalled(new MethodCalledEventArgs(observedCall.StubbedMethod, observedCall.GetArguments()));
         }
     }
 }

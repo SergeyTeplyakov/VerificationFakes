@@ -9,7 +9,7 @@ using VerificationFakes.Samples.Fakes;
 namespace VerificationFakesTests.Core.Actual
 {
     [TestFixture]
-    public class FakeActualCallsObserverTest
+    public class FakesCustomObserverTests
     {
         [Test]
         public void Test_Event_Occurred_When_Observed_Method_Calls()

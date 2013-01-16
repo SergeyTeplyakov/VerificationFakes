@@ -36,7 +36,7 @@ namespace VerificationFakes
             _verificator = new Verificator(behavior, new ErrorFormatter());
         }
 
-        private void VerifyObservedCall(object sender, MethodCallsEventArgs e)
+        private void VerifyObservedCall(object sender, MethodCalledEventArgs e)
         {
             _verificator.VerifyForUnexpectedCall(_setupCalls, e.ObservedCall);
         }
