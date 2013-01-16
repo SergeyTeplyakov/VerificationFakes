@@ -37,6 +37,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Xml" />
@@ -45,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Core\Actual\FakeActualCallsObserverTest.cs" />
     <Compile Include="Core\CSharpNameConverterTests.cs" />
     <Compile Include="Core\ErrorFormatterTests.cs" />
     <Compile Include="Core\Expected\ArgumentValues\AnyArgumentValueTests.cs" />

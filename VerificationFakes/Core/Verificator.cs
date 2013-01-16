@@ -7,7 +7,7 @@ namespace VerificationFakes.Core
     internal sealed class Verificator
     {
         private readonly MockBehavior _behavior;
-        private readonly IErrorFormatter _errorFormatter;
+        private readonly IErrorFormatter _errorFormatter = new ErrorFormatter();
 
         public Verificator(MockBehavior behavior, IErrorFormatter errorFormatter)
         {
@@ -15,7 +15,20 @@ namespace VerificationFakes.Core
 
             _behavior = behavior;
             _errorFormatter = errorFormatter;
-        } 
+        }
+
+        public void VerifyForUnexpectedCall(ICollection<ExpectedCall> expectedCalls, ObservedCall actualCall)
+        {
+            if (_behavior != MockBehavior.Strict)
+                return;
+
+            if (!IsCallExpected(expectedCalls, actualCall))
+            {
+                var error = _errorFormatter.FormatNotExpectedCallsInStrictMode(expectedCalls, new[] {actualCall});
+                throw new VerificationException(error);
+            }
+
+        }
 
         public void VerifyAll(ICollection<ExpectedCall> expectedCalls, ICollection<ObservedCall> actualCalls)
         {
@@ -23,48 +36,10 @@ namespace VerificationFakes.Core
             Contract.Requires(Contract.ForAll(expectedCalls, c => c != null),
                 "expectedCalls should contain not-null objects.");
 
-            Contract.Requires(actualCalls != null, "actualCalls should not be null.");
+            Contract.Requires(actualCalls != null, "actualCall should not be null.");
             Contract.Requires(Contract.ForAll(actualCalls, c => c != null),
-                "actualCalls should contain not-null objects.");
+                "actualCall should contain not-null objects.");
 
-            VerifyAllExpectedCalls(expectedCalls, actualCalls);
-
-            // Even for strict mocks we're checking current assumptions first
-            // and only if all of them matches we'll check oustanding calls
-            if (_behavior == MockBehavior.Strict)
-            {
-                var unexpectedCalls = GetUnexpectedCalls(expectedCalls, actualCalls).ToList();
-                if (unexpectedCalls.Count != 0)
-                {
-                    var error = _errorFormatter.FormatNotExpectedCallsInStrictMode(expectedCalls, unexpectedCalls);
-                    throw new VerificationException(error);
-                }
-            }
-        }
-
-        public void Verify(ExpectedCall expected, ICollection<ObservedCall> actual)
-        {
-            Contract.Requires(expected != null, "expected should not be null.");
-            Contract.Requires(actual != null, "actual should not be null.");
-
-            VerifyExpectedCall(expected, actual);
-
-            // Even for strict mocks we're checking current assumptions first
-            // and only if all of them matches we'll check oustanding calls
-            if (_behavior == MockBehavior.Strict)
-            {
-                var unexpected = GetUnexpectedCalls(new[] {expected}, actual).ToList();
-                if (unexpected.Count != 0)
-                {
-                    var error = _errorFormatter.FormatNotExpectedCallsInStrictMode(new[] {expected}, unexpected);
-                    throw new VerificationException(error);
-                }
-            }
-        }
-
-        private void VerifyAllExpectedCalls(ICollection<ExpectedCall> expectedCalls, 
-            ICollection<ObservedCall> actualCalls)
-        {
             var mismatches = GetExpectedMismatches(expectedCalls, actualCalls);
             if (mismatches.Any())
             {
@@ -73,15 +48,18 @@ namespace VerificationFakes.Core
             }
         }
 
-        private void VerifyExpectedCall(ExpectedCall expectedCall, ICollection<ObservedCall> actualCalls)
+        public void Verify(ExpectedCall expected, ICollection<ObservedCall> actual)
         {
-            var mismatches = GetExpectedMismatches(new []{expectedCall}, actualCalls);
+            Contract.Requires(expected != null, "expected should not be null.");
+            Contract.Requires(actual != null, "actual should not be null.");
+
+            var mismatches = GetExpectedMismatches(new []{expected}, actual);
             var firstMismatch = mismatches.FirstOrDefault();
 
             if (firstMismatch != null)
             {
                 string error = _errorFormatter.FormatVerifyError(firstMismatch.ExpectedCall, 
-                    firstMismatch.Matches, firstMismatch.ObservedCalls);
+                                                                 firstMismatch.Matches, firstMismatch.ObservedCalls);
                 throw new VerificationException(error);
             }
         }
@@ -108,20 +86,16 @@ namespace VerificationFakes.Core
             }
         }
 
-        private IEnumerable<ObservedCall> GetUnexpectedCalls(IEnumerable<ExpectedCall> expectedCalls,
-            IEnumerable<ObservedCall> actualCalls)
+        private bool IsCallExpected(IEnumerable<ExpectedCall> expectedCalls, ObservedCall actualCall)
         {
-            // Unexpected calls is a set of unique actual calls without appropriate expected call
-            
-            var expectedDictionary = expectedCalls
-                .GroupBy(c => c.Method)
-                .ToDictionary(g => g.Key, g => g.ToList());
-
-            foreach(var ac in actualCalls)
+            // Call is unexpected if we don't have any matched calls (not counting times)
+            foreach(var expectedCall in expectedCalls.Where(ac => ac.Method == actualCall.Method))
             {
-                if (!expectedDictionary.ContainsKey(ac.Method))
-                    yield return ac;
+                if (expectedCall.MatchArguments(actualCall.Arguments))
+                    return true;
             }
+
+            return false;
         }
 
         private class Match

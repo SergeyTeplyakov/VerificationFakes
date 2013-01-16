@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using System;
+using NUnit.Framework;
 using VerificationFakes;
 using VerificationFakes.Samples;
 using VerificationFakes.Samples.Fakes;
@@ -16,9 +17,7 @@ namespace VerificationFakesTests
             var mock = new Mock<ILogWriter>(stub, MockBehavior.Strict);
 
             // Act
-            ((ILogWriter)stub).Write(42);
-
-            Assert.Throws<VerificationException>(() => mock.VerifyAll(),
+            Assert.Throws<VerificationException>(() => ((ILogWriter) stub).Write(42),
                 "Strict mock should fail because of unknown method call.");
         }
         
@@ -37,20 +36,22 @@ namespace VerificationFakesTests
         }
         
         [Test]
-        public void Test_Call_To_Unknown_Method_With_Invalid_Verify_Should_Fail()
+        public void Test_Unexpected_Call_Should_Fail_To_Method_With_Another_Argument_Value()
         {
             // Arrange
             var stub = new StubILogWriter();
+            ILogWriter logWriter = stub;
             var mock = new Mock<ILogWriter>(stub, MockBehavior.Strict);
 
-            mock.Setup(lw => lw.Write(It.IsAny<int>()));
+            mock.Setup(lw => lw.Write(2));
+            mock.Setup(lw => lw.Write(3));
 
             // Act
-            ((ILogWriter)stub).Write("value");
-            ((ILogWriter)stub).Write(42);
+            logWriter.Write(2);
+            logWriter.Write(3);
 
-            Assert.Throws<VerificationException>(() => mock.VerifyAll(),
-                "Strict mock should fail because of unknown method call.");
+            Assert.Throws<VerificationException>(() => logWriter.Write(5), 
+                "Unexpected method should fail with strict mode.");
         }
     }
 }

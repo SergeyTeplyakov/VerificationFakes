@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="05e51123-6f35-4d02-9c09-fc218d20535c"
   name="UmlDiagrams" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -629,7 +629,7 @@
             Id="41d2f4a2-266a-41e7-b5bc-00ca28b9531f">
             <classMoniker
               Id="25f2b8d3-43d2-4d49-80de-4b8d61490bf3"
-              LastKnownName="ActualCall"
+              LastKnownName="ExpectedCall"
               LastKnownLocation="UmlDiagrams.uml" />
           </dependency>
         </suppliersInternal>
@@ -921,7 +921,7 @@
             Id="0c5125fa-b82c-479d-9a47-6ff3db651dc2">
             <classMoniker
               Id="25f2b8d3-43d2-4d49-80de-4b8d61490bf3"
-              LastKnownName="ActualCall"
+              LastKnownName="ExpectedCall"
               LastKnownLocation="UmlDiagrams.uml" />
           </dependency>
           <dependency
@@ -958,7 +958,7 @@
                   <type_NamedElement>
                     <classMoniker
                       Id="25f2b8d3-43d2-4d49-80de-4b8d61490bf3"
-                      LastKnownName="ActualCall"
+                      LastKnownName="ExpectedCall"
                       LastKnownLocation="UmlDiagrams.uml" />
                   </type_NamedElement>
                 </parameter>
@@ -971,7 +971,7 @@
     <packageHasNamedElement>
       <class
         Id="25f2b8d3-43d2-4d49-80de-4b8d61490bf3"
-        name="ActualCall"
+        name="ExpectedCall"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">

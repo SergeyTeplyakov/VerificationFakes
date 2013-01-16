@@ -16,13 +16,11 @@ namespace VerificationFakes
     {
         // TODO ST: we have only one spot in the codebase that depends on Fakes.
         // Consider creating a special shim for this.
-        
-        private readonly StubBase<T> _stub;
-        private readonly StubObserver _stubObserver = new StubObserver();
 
         private readonly List<ExpectedCall> _setupCalls = new List<ExpectedCall>();
 
         private readonly ExpressionsParser _parser = new ExpressionsParser();
+        private readonly ICustomStubObserver _actualCallsObserver;
         private readonly Verificator _verificator;
 
         public Mock(StubBase<T> stub)
@@ -33,10 +31,14 @@ namespace VerificationFakes
         {
             Contract.Requires(stub != null, "stub should not be null");
 
-            _stub = stub;
-
-            _stub.InstanceObserver = _stubObserver;
+            _actualCallsObserver = new FakesCustomStubObserver(stub);
+            _actualCallsObserver.MethodCalled += VerifyObservedCall;
             _verificator = new Verificator(behavior, new ErrorFormatter());
+        }
+
+        private void VerifyObservedCall(object sender, MethodCallsEventArgs e)
+        {
+            _verificator.VerifyForUnexpectedCall(_setupCalls, e.ObservedCall);
         }
 
         public void Setup(Expression<Action<T>> expression)
@@ -98,7 +100,7 @@ namespace VerificationFakes
             var expected = _parser.Parse(expression);
             expected.Times = times;
 
-            var actual = _stubObserver.GetObservedCalls();
+            var actual = _actualCallsObserver.GetObservedCalls();
 
             _verificator.Verify(expected, actual);
         }
@@ -117,14 +119,14 @@ namespace VerificationFakes
             var expected = _parser.Parse(expression);
             expected.Times = times;
 
-            var actual = _stubObserver.GetObservedCalls();
+            var actual = _actualCallsObserver.GetObservedCalls();
 
             _verificator.Verify(expected, actual);
         }
 
         public void VerifyAll()
         {
-            var actual = _stubObserver.GetObservedCalls();
+            var actual = _actualCallsObserver.GetObservedCalls();
             _verificator.VerifyAll(_setupCalls, actual);
         }
     }
