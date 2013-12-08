@@ -67,6 +67,7 @@ namespace VerificationFakes
 
         public static Times AtLeast(int times)
         {
+            Contract.Requires(times >= 0);
             Contract.Ensures(Contract.Result<Times>() != null,
                 "Resulting object should not be null.");
 
@@ -76,6 +77,7 @@ namespace VerificationFakes
 
         public static Times Exactly(int times)
         {
+            Contract.Requires(times >= 0);
             Contract.Ensures(Contract.Result<Times>() != null,
                 "Resulting object should not be null.");
 

@@ -2,6 +2,7 @@
 using Microsoft.QualityTools.Testing.Fakes.Stubs;
 using System.Linq;
 using VerificationFakes.Core;
+using System;
 
 namespace VerificationFakes
 {
@@ -14,7 +15,6 @@ namespace VerificationFakes
          public static Mock<T> AsMock<T>(this StubBase<T> stub) where T : class
          {
              Contract.Requires(stub != null);
-
              return new Mock<T>(stub);
          }
 

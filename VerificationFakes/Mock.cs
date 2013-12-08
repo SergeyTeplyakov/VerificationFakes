@@ -149,6 +149,7 @@ namespace VerificationFakes
  * 4. Fix TODO's. Some of them are crucial
  * 5. Folder structure in the main project
  * 6. Cleanup test cases
+ * 7. Check contracts
  * 
  * 
  */

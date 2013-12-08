@@ -1,4 +1,5 @@
-﻿using Microsoft.QualityTools.Testing.Fakes.Stubs;
+﻿using System;
+using Microsoft.QualityTools.Testing.Fakes.Stubs;
 using NUnit.Framework;
 using VerificationFakes.Samples;
 using VerificationFakes.Samples.Fakes;
@@ -8,6 +9,30 @@ namespace FakeMockTests
     [TestFixture]
     public class StubObserverTests
     {
+        [Test]
+        public void Sampe()
+        {
+            var mock = new StubILogWriter();
+            mock.WriteRInt32 = n => 42;
+
+            //int exptected = 0;
+            //mock.WriteInt32 = n =>
+            //                      {
+            //                          //
+            //                          exptected = n;
+            //                          Console.WriteLine(n == 42);
+            //                      };
+
+            ILogWriter logWriter = (ILogWriter) mock;
+            var expected = logWriter.WriteR(12312);
+
+            //logWriter.Write(42);
+
+            Assert.That(expected, Is.EqualTo(42));
+
+
+        }
+
         [Test]
         public void Test_Stub_Observer_Contains_Valid_Argument_And_Method_Info()
         {

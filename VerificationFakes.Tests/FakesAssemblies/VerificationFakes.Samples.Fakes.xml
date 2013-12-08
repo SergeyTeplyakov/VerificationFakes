@@ -13,6 +13,12 @@
         <member name="M:VerificationFakes.Samples.Fakes.ShimLogger.#ctor(VerificationFakes.Samples.Logger)">
             <summary>Initializes a new shim for the given instance</summary>
         </member>
+        <member name="T:VerificationFakes.Samples.Fakes.ShimLogger.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:VerificationFakes.Samples.Fakes.ShimLogger.AllInstances.WriteString">
+            <summary>Sets the shim of Logger.Write(String message)</summary>
+        </member>
         <member name="M:VerificationFakes.Samples.Fakes.ShimLogger.BehaveAsCurrent">
             <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
         </member>
@@ -28,34 +34,28 @@
         <member name="P:VerificationFakes.Samples.Fakes.ShimLogger.WriteString">
             <summary>Sets the shim of Logger.Write(String message)</summary>
         </member>
-        <member name="T:VerificationFakes.Samples.Fakes.ShimLogger.AllInstances">
-            <summary>Define shims for all instances members</summary>
-        </member>
-        <member name="P:VerificationFakes.Samples.Fakes.ShimLogger.AllInstances.WriteString">
-            <summary>Sets the shim of Logger.Write(String message)</summary>
-        </member>
         <member name="T:VerificationFakes.Samples.Fakes.StubILogWriter">
             <summary>Stub type of VerificationFakes.Samples.ILogWriter</summary>
         </member>
         <member name="M:VerificationFakes.Samples.Fakes.StubILogWriter.#ctor">
             <summary>Initializes a new instance of type StubILogWriter</summary>
         </member>
-        <member name="M:VerificationFakes.Samples.Fakes.StubILogWriter.vfs::VerificationFakes#Samples#ILogWriter#Write(System.Int32)">
+        <member name="M:VerificationFakes.Samples.Fakes.StubILogWriter.VerificationFakes#Samples#ILogWriter#Write(System.Int32)">
             <summary>Sets the stub of ILogWriter.Write(Int32 value)</summary>
         </member>
-        <member name="M:VerificationFakes.Samples.Fakes.StubILogWriter.vfs::VerificationFakes#Samples#ILogWriter#Write(System.String)">
+        <member name="M:VerificationFakes.Samples.Fakes.StubILogWriter.VerificationFakes#Samples#ILogWriter#Write(System.String)">
             <summary>Sets the stub of ILogWriter.Write(String message)</summary>
         </member>
-        <member name="M:VerificationFakes.Samples.Fakes.StubILogWriter.vfs::VerificationFakes#Samples#ILogWriter#Write(System.Int32,System.String)">
+        <member name="M:VerificationFakes.Samples.Fakes.StubILogWriter.VerificationFakes#Samples#ILogWriter#Write(System.Int32,System.String)">
             <summary>Sets the stub of ILogWriter.Write(Int32 value1, String value2)</summary>
         </member>
-        <member name="M:VerificationFakes.Samples.Fakes.StubILogWriter.vfs::VerificationFakes#Samples#ILogWriter#WriteR(System.String)">
+        <member name="M:VerificationFakes.Samples.Fakes.StubILogWriter.VerificationFakes#Samples#ILogWriter#WriteR(System.String)">
             <summary>Sets the stub of ILogWriter.WriteR(String message)</summary>
         </member>
-        <member name="M:VerificationFakes.Samples.Fakes.StubILogWriter.vfs::VerificationFakes#Samples#ILogWriter#WriteR(System.Int32)">
+        <member name="M:VerificationFakes.Samples.Fakes.StubILogWriter.VerificationFakes#Samples#ILogWriter#WriteR(System.Int32)">
             <summary>Sets the stub of ILogWriter.WriteR(Int32 value)</summary>
         </member>
-        <member name="M:VerificationFakes.Samples.Fakes.StubILogWriter.vfs::VerificationFakes#Samples#ILogWriter#WriteR(System.Int32,System.String)">
+        <member name="M:VerificationFakes.Samples.Fakes.StubILogWriter.VerificationFakes#Samples#ILogWriter#WriteR(System.Int32,System.String)">
             <summary>Sets the stub of ILogWriter.WriteR(Int32 value1, String value2)</summary>
         </member>
         <member name="F:VerificationFakes.Samples.Fakes.StubILogWriter.WriteInt32">
@@ -82,11 +82,11 @@
         <member name="M:VerificationFakes.Samples.Fakes.StubLogger.#ctor(VerificationFakes.Samples.ILogWriter)">
             <summary>Initializes a new instance</summary>
         </member>
-        <member name="M:VerificationFakes.Samples.Fakes.StubLogger.InitializeStub">
-            <summary>Initializes a new instance of type StubLogger</summary>
-        </member>
         <member name="P:VerificationFakes.Samples.Fakes.StubLogger.CallBase">
             <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:VerificationFakes.Samples.Fakes.StubLogger.InitializeStub">
+            <summary>Initializes a new instance of type StubLogger</summary>
         </member>
         <member name="P:VerificationFakes.Samples.Fakes.StubLogger.InstanceBehavior">
             <summary>Gets or sets the instance behavior.</summary>
