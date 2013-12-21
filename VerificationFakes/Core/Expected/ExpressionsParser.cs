@@ -70,7 +70,6 @@ namespace VerificationFakes.Core
 
             var parameters = arguments.ToArray();
 
-
             var expectedCall = new ExpectedCall();
             expectedCall.Method = methodInfo;
             expectedCall.Arguments = parameters;

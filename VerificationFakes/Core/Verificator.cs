@@ -4,6 +4,9 @@ using System.Linq;
 
 namespace VerificationFakes.Core
 {
+    /// <summary>
+    /// Verifies that expected calls corresponds to actualls calls depending on mocking behavior.
+    /// </summary>
     internal sealed class Verificator
     {
         private readonly MockBehavior _behavior;

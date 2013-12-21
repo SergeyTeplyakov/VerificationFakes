@@ -3,7 +3,7 @@ using System.Diagnostics.Contracts;
 namespace VerificationFakes.Core
 {
     /// <summary>
-    /// Models any expected value for behavior testing.
+    /// Models expected value that matches to any actual value during behavior testing.
     /// </summary>
     internal sealed class AnyArgumentValue : ArgumentValue
     {

@@ -2,7 +2,6 @@
 using Microsoft.QualityTools.Testing.Fakes.Stubs;
 using System.Linq;
 using VerificationFakes.Core;
-using System;
 
 namespace VerificationFakes
 {
@@ -12,11 +11,17 @@ namespace VerificationFakes
     /// </summary>
     public static class StubBaseEx
     {
-         public static Mock<T> AsMock<T>(this StubBase<T> stub) where T : class
-         {
-             Contract.Requires(stub != null);
-             return new Mock<T>(stub);
-         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="stub"></param>
+        /// <returns></returns>
+        public static Mock<T> AsMock<T>(this StubBase<T> stub) where T : class
+        {
+            Contract.Requires(stub != null);
+            return new Mock<T>(stub);
+        }
 
         internal static ObservedCall[] GetObservedCalls(this StubObserver observer)
         {

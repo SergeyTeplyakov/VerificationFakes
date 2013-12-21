@@ -23,10 +23,19 @@ namespace VerificationFakes
         private readonly ICustomStubObserver _actualCallsObserver;
         private readonly Verificator _verificator;
 
+        /// <summary>
+        /// Creates new mock object for speficied <paramref name="stub"/> from Microsoft Fakes.
+        /// </summary>
+        /// <remarks>
+        /// Default behaviour is MockBehavior.Default.
+        /// </remarks>
         public Mock(StubBase<T> stub)
             : this(stub, MockBehavior.Default)
         {}
 
+        /// <summary>
+        /// Creates new mock object for specified <paramref name="stub"/> and <paramref name="behavior"/>.
+        /// </summary>
         public Mock(StubBase<T> stub, MockBehavior behavior)
         {
             Contract.Requires(stub != null, "stub should not be null");
@@ -36,11 +45,9 @@ namespace VerificationFakes
             _verificator = new Verificator(behavior, new ErrorFormatter());
         }
 
-        private void VerifyObservedCall(object sender, MethodCalledEventArgs e)
-        {
-            _verificator.VerifyForUnexpectedCall(_setupCalls, e.ObservedCall);
-        }
-
+        /// <summary>
+        /// Specifies expected action for the mocked type.
+        /// </summary>
         public void Setup(Expression<Action<T>> expression)
         {
             Contract.Requires(expression != null, "expression should not be null.");
@@ -50,6 +57,10 @@ namespace VerificationFakes
             Setup(expression, Times.Once());
         }
         
+        /// <summary>
+        /// Specifies expected action for the mocked type and with specifies expected
+        /// number of calls to that method.
+        /// </summary>
         public void Setup(Expression<Action<T>> expression, Times times)
         {
             Contract.Requires(expression != null, "expression should not be null.");
@@ -62,6 +73,9 @@ namespace VerificationFakes
             _setupCalls.Add(expected);
         }
 
+        /// <summary>
+        /// Specifies expected action with a return value for the mocked type.
+        /// </summary>
         public void Setup<TResult>(Expression<Func<T, TResult>> expression)
         {
             Contract.Requires(expression != null, "expression should not be null.");
@@ -71,6 +85,10 @@ namespace VerificationFakes
             Setup(expression, Times.Once());
         }
         
+        /// <summary>
+        /// Specifies expected action with a return value for the mocked type and
+        /// specifies expected number of calls to that method.
+        /// </summary>
         public void Setup<TResult>(Expression<Func<T, TResult>> expression, Times times)
         {
             Contract.Requires(expression != null, "expression should not be null.");
@@ -86,13 +104,23 @@ namespace VerificationFakes
         }
 
         // TODO: argument name is not good! (took from the Moq)
+        /// <summary>
+        /// Verify that a specific invocation matching the given expression was performed on the mock.
+        /// </summary>
+        /// <param name="expression">Expression to verify.</param>
         public void Verify(Expression<Action<T>> expression)
         {
             Contract.Requires(expression != null, "expression should not be null");
 
             Verify(expression, Times.Once());
         }
-        
+
+        /// <summary>
+        /// Verify that a specific invocation matching the given expression was performed on the mock 
+        /// specified number of times.
+        /// </summary>
+        /// <param name="expression">Expression to verify.</param>
+        /// <param name="times">Number of times that invocatoin should been occurred</param>
         public void Verify(Expression<Action<T>> expression, Times times)
         {
             Contract.Requires(expression != null, "expression should not be null");
@@ -104,14 +132,24 @@ namespace VerificationFakes
 
             _verificator.Verify(expected, actual);
         }
-        
+
+        /// <summary>
+        /// Verify that a specific invocation matching the given expression was performed on the mock.
+        /// </summary>
+        /// <param name="expression">Expression to verify.</param>
         public void Verify<TResult>(Expression<Func<T, TResult>> expression)
         {
             Contract.Requires(expression != null, "expression should not be null");
 
             Verify(expression, Times.Once());
         }
-        
+
+        /// <summary>
+        /// Verify that a specific invocation matching the given expression was performed on the mock 
+        /// specified number of times.
+        /// </summary>
+        /// <param name="expression">Expression to verify.</param>
+        /// <param name="times">Number of times that invocatoin should been occurred</param>
         public void Verify<TResult>(Expression<Func<T, TResult>> expression, Times times)
         {
             Contract.Requires(expression != null, "expression should not be null");
@@ -124,11 +162,20 @@ namespace VerificationFakes
             _verificator.Verify(expected, actual);
         }
 
+        /// <summary>
+        /// Verify that all expectations.
+        /// </summary>
         public void VerifyAll()
         {
             var actual = _actualCallsObserver.GetObservedCalls();
             _verificator.VerifyAll(_setupCalls, actual);
         }
+
+        private void VerifyObservedCall(object sender, MethodCalledEventArgs e)
+        {
+            _verificator.VerifyForUnexpectedCall(_setupCalls, e.ObservedCall);
+        }
+
     }
 
 }

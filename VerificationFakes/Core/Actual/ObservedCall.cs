@@ -4,7 +4,7 @@ using System.Reflection;
 namespace VerificationFakes.Core
 {
     /// <summary>
-    /// Represents method calls that really occurred for the mocked object.
+    /// Represents method calls that really occurred for a mocked object.
     /// </summary>
     internal sealed class ObservedCall
     {

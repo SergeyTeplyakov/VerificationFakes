@@ -48,6 +48,7 @@ namespace VerificationFakes.Core
         /// </summary>
         public static string GetGenericTypeBaseName(Type type)
         {
+            Contract.Requires(type != null, "type should not be null.");
             // For generic types type.Name returns something like
             // Generic`1 or Generic`3 but we need to obtain
             // generics base name like Genric or List

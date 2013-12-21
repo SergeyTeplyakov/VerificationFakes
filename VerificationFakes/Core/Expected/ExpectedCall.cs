@@ -17,6 +17,7 @@ namespace VerificationFakes.Core
         // TODO ST: move to other class.
         public bool MatchArguments(object[] actualArguments)
         {
+            Contract.Requires(actualArguments != null, "actualArguments should not be null.");
             Contract.Requires(actualArguments.Length == Arguments.Length,
                 "Expected and actual argument length should match");
 

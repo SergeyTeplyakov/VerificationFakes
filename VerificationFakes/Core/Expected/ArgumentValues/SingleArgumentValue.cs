@@ -1,5 +1,6 @@
 namespace VerificationFakes.Core
 {
+    // TODO: should this class be generic?
     /// <summary>
     /// Models single expected value for behavior testing.
     /// </summary>
@@ -9,6 +10,7 @@ namespace VerificationFakes.Core
 
         public SingleArgumentValue(object value)
         {
+            // value could be null
             _value = value;
         }
 

@@ -28,7 +28,6 @@ namespace VerificationFakes.Core
         public int UpperBound { get; private set; }
         public Range.BoundaryType UpperBoundType { get; private set; }
 
-
         public static RangeBuilder From(int value)
         {
             Contract.Requires(value >= 0);

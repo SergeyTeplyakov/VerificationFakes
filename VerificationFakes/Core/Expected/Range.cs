@@ -43,7 +43,7 @@ namespace VerificationFakes.Core
                      int upperBound, BoundaryType upperBoundType)
         {
             if (!IsValid(lowerBound, lowerBoundType, upperBound, upperBoundType))
-                throw new ArgumentOutOfRangeException("Invalid range. Please check the values.");
+                throw new ArgumentException("Invalid range. Please check the values.");
             Contract.EndContractBlock();
 
             LowerBound = lowerBound;

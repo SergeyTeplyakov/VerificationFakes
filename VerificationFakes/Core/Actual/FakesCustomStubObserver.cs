@@ -8,12 +8,13 @@ namespace VerificationFakes.Core
 {
     /// <summary>
     /// Wraps <see cref="StubBase"/> and implements <see cref="ICustomStubObserver"/> to produce
-    /// observed method calls and fire an event when actuall method calls.
+    /// observed method calls and notify subscribers about this.
     /// </summary>
     internal class FakesCustomStubObserver : ICustomStubObserver, IStubObserver
     {
         private readonly object _observedLock = new object();
         private readonly List<StubObservedCall> _observedCalls = new List<StubObservedCall>();
+
         public FakesCustomStubObserver(StubBase stub)
         {
             Contract.Requires(stub != null, "stub should not be null.");
@@ -31,8 +32,21 @@ namespace VerificationFakes.Core
             }
         }
 
+        public void ClearObservedCalls()
+        {
+            lock (_observedLock)
+            {
+                _observedCalls.Clear();
+            }
+        }
+
         public event EventHandler<MethodCalledEventArgs> MethodCalled;
 
+        /// <summary>
+        /// This method gets called by Microsoft Fakes during every
+        /// </summary>
+        /// <param name="stubbedType"></param>
+        /// <param name="stubCall"></param>
         void IStubObserver.Enter(Type stubbedType, Delegate stubCall)
         {
             if (stubCall == null)

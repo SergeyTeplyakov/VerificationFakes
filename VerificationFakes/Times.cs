@@ -22,7 +22,11 @@ namespace VerificationFakes
         {
             return _range.Contains(value);
         }
-
+        
+        /// <summary>
+        /// Returns string representation of the Times object.
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return string.Format("{0} times", _range) ;
@@ -33,6 +37,10 @@ namespace VerificationFakes
             return Equals(_range, other._range);
         }
 
+        /// <summary>
+        /// Returns true if <paramref name="obj"/> is of type <see cref="Times"/> and
+        /// two instances are equals.
+        /// </summary>
         public override bool Equals(object obj)
         {
             if (ReferenceEquals(null, obj)) return false;
@@ -40,21 +48,34 @@ namespace VerificationFakes
             return obj is Times && Equals((Times) obj);
         }
 
+        /// <summary>
+        /// Returns true if <paramref name="left"/> and <paramref name="right"/> instances are equals.
+        /// </summary>
         public static bool operator ==(Times left, Times right)
         {
             return Equals(left, right);
         }
 
+        /// <summary>
+        /// Returns true if <paramref name="left"/> and <paramref name="right"/> instance
+        /// are not equals.
+        /// </summary>
         public static bool operator !=(Times left, Times right)
         {
             return !Equals(left, right);
         }
-
+        
+        /// <summary>
+        /// Returns hash code of the instance.
+        /// </summary>
         public override int GetHashCode()
         {
             return _range.GetHashCode();
         }
 
+        /// <summary>
+        /// Represents expected calls count when expected method should be called exactly once.
+        /// </summary>
         public static Times Once()
         {
             Contract.Ensures(Contract.Result<Times>() != null,
@@ -65,6 +86,10 @@ namespace VerificationFakes
             return Exactly(1);
         }
 
+        /// <summary>
+        /// Represents expected calls count when expected method should be called at 
+        /// least <paramref name="times"/> times.
+        /// </summary>
         public static Times AtLeast(int times)
         {
             Contract.Requires(times >= 0);
@@ -75,6 +100,10 @@ namespace VerificationFakes
             return new Times(range);
         }
 
+        /// <summary>
+        /// Represents expected calls count when expected method should be called exactly
+        /// <paramref name="times"/> times.
+        /// </summary>
         public static Times Exactly(int times)
         {
             Contract.Requires(times >= 0);
@@ -85,6 +114,10 @@ namespace VerificationFakes
             return new Times(range);
         }
 
+        /// <summary>
+        /// Represents expected calls count when expected method should never be called.
+        /// </summary>
+        /// <returns></returns>
         public static Times Never()
         {
             Contract.Ensures(Contract.Result<Times>() != null,

@@ -25,7 +25,8 @@ namespace VerificationFakes.Core
     [ContractClassFor(typeof(IErrorFormatter))]
     internal abstract class ErrorFormatterContracts : IErrorFormatter
     {
-        string IErrorFormatter.FormatVerifyError(ExpectedCall expected, int actualCalls, ICollection<ObservedCall> actual)
+        string IErrorFormatter.FormatVerifyError(ExpectedCall expected, int actualCalls, 
+            ICollection<ObservedCall> actual)
         {
             Contract.Requires(expected != null, "expected should not be null.");
             Contract.Requires(actual != null, "actual should not be null.");

@@ -8,6 +8,9 @@ namespace VerificationFakes
     /// </summary>
     public sealed class VerificationException : Exception
     {
+        /// <summary>
+        /// Creates an instance of the verification exception.
+        /// </summary>
         public VerificationException(string message) : base(message)
         {}
     }
