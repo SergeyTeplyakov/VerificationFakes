@@ -12,11 +12,15 @@ namespace VerificationFakes
     /// Provides a mock implementation of <typeparamref name="T"/>.
     /// </summary>
     /// <typeparam name="T">Generic type parameter for mocking.</typeparam>
-    public class Mock<T> where T : class
+    public class Mock<T>
+        //where T : StubBase<T>
+        where T : class
+                         
     {
         // TODO ST: we have only one spot in the codebase that depends on Fakes.
         // Consider creating a special shim for this.
 
+        private readonly T _mockedObject;
         private readonly List<ExpectedCall> _setupCalls = new List<ExpectedCall>();
 
         private readonly ExpressionsParser _parser = new ExpressionsParser();
@@ -29,10 +33,10 @@ namespace VerificationFakes
         /// <remarks>
         /// Default behaviour is MockBehavior.Default.
         /// </remarks>
-        public Mock(StubBase<T> stub)
+        public Mock(StubBase<T> stub) 
             : this(stub, MockBehavior.Default)
         {}
-
+        
         /// <summary>
         /// Creates new mock object for specified <paramref name="stub"/> and <paramref name="behavior"/>.
         /// </summary>
@@ -40,10 +44,17 @@ namespace VerificationFakes
         {
             Contract.Requires(stub != null, "stub should not be null");
 
+            _mockedObject = (T)(object)stub;
+
             _actualCallsObserver = new FakesCustomStubObserver(stub);
             _actualCallsObserver.MethodCalled += VerifyObservedCall;
             _verificator = new Verificator(behavior, new ErrorFormatter());
         }
+
+        /// <summary>
+        /// Returns mocked object instance.
+        /// </summary>
+        public T Object { get { return _mockedObject; } }
 
         /// <summary>
         /// Specifies expected action for the mocked type.
@@ -163,9 +174,9 @@ namespace VerificationFakes
         }
 
         /// <summary>
-        /// Verify that all expectations.
+        /// Verify that all expectations are met.
         /// </summary>
-        public void VerifyAll()
+        public void Verify()
         {
             var actual = _actualCallsObserver.GetObservedCalls();
             _verificator.VerifyAll(_setupCalls, actual);

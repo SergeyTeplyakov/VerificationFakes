@@ -32,7 +32,7 @@ namespace VerificationFakesTests
             // Act
             ((ILogWriter)stub).Write(42);
 
-            mock.VerifyAll();
+            mock.Verify();
         }
         
         [Test]

@@ -40,7 +40,7 @@ namespace VerificationFakesTests
             action.Compile()(stub);
 
             // Assert
-            mock.VerifyAll();
+            mock.Verify();
         }
 
         public static IEnumerable<TestCaseData> GetVerifyWithOneActionTestCases()

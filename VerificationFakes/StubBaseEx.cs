@@ -12,16 +12,29 @@ namespace VerificationFakes
     public static class StubBaseEx
     {
         /// <summary>
-        /// 
+        /// Creates mock-object out of Microsoft Fakes stubs.
+        /// </summary>
+        public static Mock<T> AsMock<T>(this StubBase<T> stub) where T : class
+        {
+            Contract.Requires(stub != null);
+            Contract.Ensures(Contract.Result<Mock<T>>() != null);
+
+            return new Mock<T>(stub);
+        }
+
+        /// <summary>
+        /// Creates strict mock-object out of Microsoft Fakes stub.
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="stub"></param>
         /// <returns></returns>
-        public static Mock<T> AsMock<T>(this StubBase<T> stub) where T : class
+        public static Mock<T> AsStrictMock<T>(this StubBase<T> stub) where T : class
         {
             Contract.Requires(stub != null);
-            return new Mock<T>(stub);
-        }
+            Contract.Ensures(Contract.Result<Mock<T>>() != null);
+
+            return new Mock<T>(stub, MockBehavior.Strict);
+        } 
 
         internal static ObservedCall[] GetObservedCalls(this StubObserver observer)
         {

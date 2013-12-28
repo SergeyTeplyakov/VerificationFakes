@@ -33,7 +33,7 @@ namespace VerificationFakesTests
             _logWriter.Write("foo");
             
             // Assert
-            _mock.VerifyAll();
+            _mock.Verify();
         }
         
         [Test]
@@ -47,8 +47,8 @@ namespace VerificationFakesTests
             _logWriter.Write(42);
             
             // Assert
-            Assert.Throws<VerificationException>(() => _mock.VerifyAll(),
-                "VerifyAll should fail because only one method was called.");
+            Assert.Throws<VerificationException>(() => _mock.Verify(),
+                "Verify should fail because only one method was called.");
         }
     }
 }
