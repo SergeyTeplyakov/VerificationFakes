@@ -34,6 +34,69 @@
         <member name="P:VerificationFakes.Samples.Fakes.ShimLogger.WriteString">
             <summary>Sets the shim of Logger.Write(String message)</summary>
         </member>
+        <member name="T:VerificationFakes.Samples.Fakes.ShimSealedLoggerDependency">
+            <summary>Shim type of VerificationFakes.Samples.SealedLoggerDependency</summary>
+        </member>
+        <member name="M:VerificationFakes.Samples.Fakes.ShimSealedLoggerDependency.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:VerificationFakes.Samples.Fakes.ShimSealedLoggerDependency.#ctor(VerificationFakes.Samples.SealedLoggerDependency)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:VerificationFakes.Samples.Fakes.ShimSealedLoggerDependency.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:VerificationFakes.Samples.Fakes.ShimSealedLoggerDependency.AllInstances.DefaultLoggerGet">
+            <summary>Sets the shim of SealedLoggerDependency.get_DefaultLogger()</summary>
+        </member>
+        <member name="M:VerificationFakes.Samples.Fakes.ShimSealedLoggerDependency.AllInstances.GetConfigValueOf1``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{VerificationFakes.Samples.SealedLoggerDependency,``0})">
+            <summary>Sets the shim of SealedLoggerDependency.GetConfigValue()</summary>
+        </member>
+        <member name="P:VerificationFakes.Samples.Fakes.ShimSealedLoggerDependency.AllInstances.GetCurrentDirectory">
+            <summary>Sets the shim of SealedLoggerDependency.GetCurrentDirectory()</summary>
+        </member>
+        <member name="P:VerificationFakes.Samples.Fakes.ShimSealedLoggerDependency.AllInstances.GetDirectoryByLoggerNameString">
+            <summary>Sets the shim of SealedLoggerDependency.GetDirectoryByLoggerName(String loggerName)</summary>
+        </member>
+        <member name="P:VerificationFakes.Samples.Fakes.ShimSealedLoggerDependency.AllInstances.RollingRequiredAddEventHandler">
+            <summary>Sets the shim of SealedLoggerDependency.add_RollingRequired(EventHandler value)</summary>
+        </member>
+        <member name="P:VerificationFakes.Samples.Fakes.ShimSealedLoggerDependency.AllInstances.RollingRequiredRemoveEventHandler">
+            <summary>Sets the shim of SealedLoggerDependency.remove_RollingRequired(EventHandler value)</summary>
+        </member>
+        <member name="M:VerificationFakes.Samples.Fakes.ShimSealedLoggerDependency.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:VerificationFakes.Samples.Fakes.ShimSealedLoggerDependency.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:VerificationFakes.Samples.Fakes.ShimSealedLoggerDependency.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:VerificationFakes.Samples.Fakes.ShimSealedLoggerDependency.Constructor">
+            <summary>Sets the shim of SealedLoggerDependency.SealedLoggerDependency()</summary>
+        </member>
+        <member name="P:VerificationFakes.Samples.Fakes.ShimSealedLoggerDependency.DefaultLoggerGet">
+            <summary>Sets the shim of SealedLoggerDependency.get_DefaultLogger()</summary>
+        </member>
+        <member name="M:VerificationFakes.Samples.Fakes.ShimSealedLoggerDependency.GetConfigValueOf1``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{``0})">
+            <summary>Sets the shim of SealedLoggerDependency.GetConfigValue()</summary>
+        </member>
+        <member name="P:VerificationFakes.Samples.Fakes.ShimSealedLoggerDependency.GetCurrentDirectory">
+            <summary>Sets the shim of SealedLoggerDependency.GetCurrentDirectory()</summary>
+        </member>
+        <member name="P:VerificationFakes.Samples.Fakes.ShimSealedLoggerDependency.GetDefaultDirectory">
+            <summary>Sets the shim of SealedLoggerDependency.GetDefaultDirectory()</summary>
+        </member>
+        <member name="P:VerificationFakes.Samples.Fakes.ShimSealedLoggerDependency.GetDirectoryByLoggerNameString">
+            <summary>Sets the shim of SealedLoggerDependency.GetDirectoryByLoggerName(String loggerName)</summary>
+        </member>
+        <member name="P:VerificationFakes.Samples.Fakes.ShimSealedLoggerDependency.RollingRequiredAddEventHandler">
+            <summary>Sets the shim of SealedLoggerDependency.add_RollingRequired(EventHandler value)</summary>
+        </member>
+        <member name="P:VerificationFakes.Samples.Fakes.ShimSealedLoggerDependency.RollingRequiredRemoveEventHandler">
+            <summary>Sets the shim of SealedLoggerDependency.remove_RollingRequired(EventHandler value)</summary>
+        </member>
         <member name="T:VerificationFakes.Samples.Fakes.StubILogWriter">
             <summary>Stub type of VerificationFakes.Samples.ILogWriter</summary>
         </member>
@@ -75,6 +138,36 @@
         </member>
         <member name="F:VerificationFakes.Samples.Fakes.StubILogWriter.WriteString">
             <summary>Sets the stub of ILogWriter.Write(String message)</summary>
+        </member>
+        <member name="T:VerificationFakes.Samples.Fakes.StubILoggerDependency">
+            <summary>Stub type of VerificationFakes.Samples.ILoggerDependency</summary>
+        </member>
+        <member name="M:VerificationFakes.Samples.Fakes.StubILoggerDependency.#ctor">
+            <summary>Initializes a new instance of type StubILoggerDependency</summary>
+        </member>
+        <member name="P:VerificationFakes.Samples.Fakes.StubILoggerDependency.VerificationFakes#Samples#ILoggerDependency#DefaultLogger">
+            <summary>Sets the stub of ILoggerDependency.get_DefaultLogger()</summary>
+        </member>
+        <member name="F:VerificationFakes.Samples.Fakes.StubILoggerDependency.DefaultLoggerGet">
+            <summary>Sets the stub of ILoggerDependency.get_DefaultLogger()</summary>
+        </member>
+        <member name="M:VerificationFakes.Samples.Fakes.StubILoggerDependency.GetConfigValueOf1``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{``0})">
+            <summary>Sets stubs of GetConfigValue()</summary>
+        </member>
+        <member name="F:VerificationFakes.Samples.Fakes.StubILoggerDependency.GetCurrentDirectory">
+            <summary>Sets the stub of ILoggerDependency.GetCurrentDirectory()</summary>
+        </member>
+        <member name="F:VerificationFakes.Samples.Fakes.StubILoggerDependency.GetDirectoryByLoggerNameString">
+            <summary>Sets the stub of ILoggerDependency.GetDirectoryByLoggerName(String loggerName)</summary>
+        </member>
+        <member name="M:VerificationFakes.Samples.Fakes.StubILoggerDependency.VerificationFakes#Samples#ILoggerDependency#GetConfigValue``1">
+            <summary>Sets the stub of ILoggerDependency.GetConfigValue()</summary>
+        </member>
+        <member name="M:VerificationFakes.Samples.Fakes.StubILoggerDependency.VerificationFakes#Samples#ILoggerDependency#GetCurrentDirectory">
+            <summary>Sets the stub of ILoggerDependency.GetCurrentDirectory()</summary>
+        </member>
+        <member name="M:VerificationFakes.Samples.Fakes.StubILoggerDependency.VerificationFakes#Samples#ILoggerDependency#GetDirectoryByLoggerName(System.String)">
+            <summary>Sets the stub of ILoggerDependency.GetDirectoryByLoggerName(String loggerName)</summary>
         </member>
         <member name="T:VerificationFakes.Samples.Fakes.StubLogger">
             <summary>Stub type of VerificationFakes.Samples.Logger</summary>

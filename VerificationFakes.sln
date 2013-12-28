@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VerificationFakes", "VerificationFakes\VerificationFakes.csproj", "{55CD643A-E464-4377-8F9F-1A92930A2ABF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VerificationFakes.Tests", "VerificationFakes.Tests\VerificationFakes.Tests.csproj", "{B0712FC3-7191-4062-8CAD-F8A275FF49C6}"
@@ -10,6 +12,10 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{B7C513FC-B375-4CB1-8C2D-1EC07348C98A}"
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "UmlDiagrams", "UmlDiagrams\UmlDiagrams.modelproj", "{10E30117-5580-451B-80A2-91F11D49D5B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{2A08806F-A1BB-48E9-ACA5-D639570B0B79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VerificationFakes.Samples.Tests", "Samples\VerificationFakes.Samples.Tests\VerificationFakes.Samples.Tests.csproj", "{EA7BC289-E325-4C38-834B-E19BBB6AE757}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,11 +39,17 @@ Global
 		{10E30117-5580-451B-80A2-91F11D49D5B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{10E30117-5580-451B-80A2-91F11D49D5B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{10E30117-5580-451B-80A2-91F11D49D5B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA7BC289-E325-4C38-834B-E19BBB6AE757}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA7BC289-E325-4C38-834B-E19BBB6AE757}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA7BC289-E325-4C38-834B-E19BBB6AE757}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA7BC289-E325-4C38-834B-E19BBB6AE757}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{10E30117-5580-451B-80A2-91F11D49D5B3} = {B7C513FC-B375-4CB1-8C2D-1EC07348C98A}
+		{85FE1323-5ECF-488F-B429-F75598B6991E} = {2A08806F-A1BB-48E9-ACA5-D639570B0B79}
+		{EA7BC289-E325-4C38-834B-E19BBB6AE757} = {2A08806F-A1BB-48E9-ACA5-D639570B0B79}
 	EndGlobalSection
 EndGlobal
