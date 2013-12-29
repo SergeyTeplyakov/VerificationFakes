@@ -20,7 +20,8 @@ namespace VerificationFakes.Samples.Tests
                 shim.GetCurrentDirectory = () => "D:\\Temp";
 
                 // Act
-                var loggerDependency = shim.Instance;
+                // There is an explicit conversion from the shim to shimed object
+                SealedLoggerDependency loggerDependency = shim;
                 var currentDirectory = loggerDependency.GetCurrentDirectory();
                 Console.WriteLine("Current directory is {0}", currentDirectory);
 
@@ -167,8 +168,47 @@ namespace VerificationFakes.Samples.Tests
                 var defaultDirectory = SealedLoggerDependency.GetDefaultDirectory();
                 Console.WriteLine("Default directory is '{0}'", defaultDirectory);
 
+                // Assert
                 Assert.That(defaultDirectory, Is.EqualTo("C:\\Windows"));
             }
         }
+
+        [Test]
+        public void Test_Shim_That_Calls_Default_Version_Of_GetDefaultDirectory()
+        {
+            using (ShimsContext.Create())
+            {
+                // Arrange
+                int initialCallsCount = SealedLoggerDependency.GetDefaultDirectoryCallsCount;
+                ShimSealedLoggerDependency.GetDefaultDirectory = () => "C:\\Windows";
+
+                // Act
+                // Calling "mocked" version
+                SealedLoggerDependency.GetDefaultDirectory();
+                Assert.That(SealedLoggerDependency.GetDefaultDirectoryCallsCount,
+                    Is.EqualTo(initialCallsCount));
+
+                // Calling original version
+                var defaultValue = ShimsContext.ExecuteWithoutShims(
+                    () => SealedLoggerDependency.GetDefaultDirectory());
+
+                Assert.That(SealedLoggerDependency.GetDefaultDirectoryCallsCount,
+                    Is.EqualTo(initialCallsCount + 1));
+            }
+        }
+
+        [Test]
+        public void Test_Shim_For_Class_Constructor()
+        {
+            using (ShimsContext.Create())
+            {
+                // Arrange
+            }
+        }
+
+        // TODO: what is not covered yet:
+        // 1. Call base version of the method
+        // 2. Constructor
+
     }
 }

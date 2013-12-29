@@ -50,6 +50,7 @@
     <Compile Include="ShimSamples.cs" />
     <Compile Include="StabSamples.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StubILoggerDependencySample.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\VerificationFakes.Samples\VerificationFakes.Samples.csproj">
@@ -63,8 +64,6 @@
   </ItemGroup>
   <ItemGroup>
     <Fakes Include="Fakes\VerificationFakes.Samples.fakes" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

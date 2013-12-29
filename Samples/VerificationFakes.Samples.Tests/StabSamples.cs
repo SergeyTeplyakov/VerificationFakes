@@ -30,6 +30,7 @@ namespace VerificationFakes.Samples.Tests
             stub.GetCurrentDirectory = () => "D:\\Temp";
 
             // Act
+            // StubILoggerDependency реализует интерфейс ILoggerDependency
             ILoggerDependency loggerDependency = stub;
             var currentDirectory = loggerDependency.GetCurrentDirectory();
             Console.WriteLine("Current directory is {0}", currentDirectory);
@@ -163,6 +164,7 @@ namespace VerificationFakes.Samples.Tests
             // Arrange
             var stub = new StubILoggerDependency();
             stub.BehaveAsDefaultValue();
+
             ILoggerDependency logerDependency = stub;
 
             // Act

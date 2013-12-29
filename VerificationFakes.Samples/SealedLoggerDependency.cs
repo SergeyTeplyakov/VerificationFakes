@@ -30,9 +30,12 @@ namespace VerificationFakes.Samples
             throw new NotImplementedException();
         }
 
+        public static int GetDefaultDirectoryCallsCount;
+
         public static string GetDefaultDirectory()
         {
-            throw new NotImplementedException();
+            GetDefaultDirectoryCallsCount++;
+            return GetDefaultDirectoryCallsCount.ToString();
         }
 
     }
