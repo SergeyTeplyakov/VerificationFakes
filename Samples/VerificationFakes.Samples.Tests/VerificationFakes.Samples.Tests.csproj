@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ManualVerificationTesting.cs" />
     <Compile Include="MockSamples.cs" />
     <Compile Include="ShimSamples.cs" />
     <Compile Include="StabSamples.cs" />

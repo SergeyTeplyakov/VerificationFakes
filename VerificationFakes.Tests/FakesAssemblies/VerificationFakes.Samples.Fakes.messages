@@ -1,3 +1,0 @@
-D:\Sources\Projects\VerificationFakes\VerificationFakes.Tests\Core\Fakes\VerificationFakes.Samples.fakes : warning : Cannot generate stub for VerificationFakes.Samples.SealedLoggerDependency: type is sealed.
-D:\Sources\Projects\VerificationFakes\VerificationFakes.Tests\Core\Fakes\VerificationFakes.Samples.fakes : warning : Cannot generate shim for VerificationFakes.Samples.ILoggerDependency: type is an interface.
-D:\Sources\Projects\VerificationFakes\VerificationFakes.Tests\Core\Fakes\VerificationFakes.Samples.fakes : warning : Cannot generate shim for VerificationFakes.Samples.ILogWriter: type is an interface.

@@ -16,6 +16,9 @@
         <member name="T:VerificationFakes.Samples.Fakes.ShimLogger.AllInstances">
             <summary>Define shims for all instances members</summary>
         </member>
+        <member name="P:VerificationFakes.Samples.Fakes.ShimLogger.AllInstances.WriteInt32">
+            <summary>Sets the shim of Logger.Write(Int32 value)</summary>
+        </member>
         <member name="P:VerificationFakes.Samples.Fakes.ShimLogger.AllInstances.WriteString">
             <summary>Sets the shim of Logger.Write(String message)</summary>
         </member>
@@ -30,6 +33,9 @@
         </member>
         <member name="P:VerificationFakes.Samples.Fakes.ShimLogger.ConstructorILogWriter">
             <summary>Sets the shim of Logger.Logger(ILogWriter logWriter)</summary>
+        </member>
+        <member name="P:VerificationFakes.Samples.Fakes.ShimLogger.WriteInt32">
+            <summary>Sets the shim of Logger.Write(Int32 value)</summary>
         </member>
         <member name="P:VerificationFakes.Samples.Fakes.ShimLogger.WriteString">
             <summary>Sets the shim of Logger.Write(String message)</summary>

@@ -37,6 +37,5 @@ namespace VerificationFakes.Samples
             GetDefaultDirectoryCallsCount++;
             return GetDefaultDirectoryCallsCount.ToString();
         }
-
     }
 }

@@ -13,5 +13,10 @@
         {
             _logWriter.Write(message);
         }
+
+        public void Write(int value)
+        {
+            _logWriter.Write(value);
+        }
     }
 }

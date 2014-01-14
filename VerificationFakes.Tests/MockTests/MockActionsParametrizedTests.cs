@@ -46,6 +46,9 @@ namespace VerificationFakesTests
         public static IEnumerable<TestCaseData> GetVerifyWithOneActionTestCases()
         {
             var builder = new Builder<ILogWriter>();
+
+            yield return new TestCaseData("init1", "do1").Returns(0);
+
             // Test cases for ILogWriter.Write(int)
             yield return builder.Do(lw => lw.Write(42)).Expects(lw => lw.Write(42));
             yield return builder.Do(lw => lw.Write(42)).Expects(lw => lw.Write(42));

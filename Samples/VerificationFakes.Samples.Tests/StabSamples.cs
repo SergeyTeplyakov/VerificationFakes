@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Microsoft.QualityTools.Testing.Fakes.Stubs;
 using NUnit.Framework;
 using VerificationFakes.Samples.Fakes;
@@ -106,6 +102,7 @@ namespace VerificationFakes.Samples.Tests
             // Raising event manually
             stub.RollingRequiredEvent(this, EventArgs.Empty);
 
+            // Assert
             Assert.IsTrue(eventOccurred, "Event should be raised!");
         }
 

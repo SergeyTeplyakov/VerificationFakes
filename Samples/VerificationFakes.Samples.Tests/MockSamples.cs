@@ -1,5 +1,4 @@
-﻿using Microsoft.QualityTools.Testing.Fakes.Stubs;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using VerificationFakes.Samples.Fakes;
 
 namespace VerificationFakes.Samples.Tests
@@ -13,7 +12,7 @@ namespace VerificationFakes.Samples.Tests
             // StubILogWriter : StubBase<ILogWriter>, ILogWriter
             // Arrange
             var stub = new StubILogWriter();
-            var mock = stub.AsMock();
+            Mock<ILogWriter> mock = stub.AsMock();
             var logger = new Logger(stub);
 
             // Act
@@ -57,6 +56,36 @@ namespace VerificationFakes.Samples.Tests
                 Times.Once());
         }
 
+        [Test]
+        public void Test_WriteLine_Never_Calls_Write_Int()
+        {
+            // Arrange
+            var stub = new StubILogWriter();
+            var mock = stub.AsMock();
+            var logger = new Logger(mock.Object);
+
+            // Act
+            logger.Write("Hello, logger");
+
+            // Assert
+            mock.Verify(lw => lw.Write(It.IsAny<int>()), Times.Never());
+        }
+
+        [Test]
+        public void Test_Write_Int_Calls_Write_With_Argument_In_Specific_Interval()
+        {
+            // Arrange
+            var stub = new StubILogWriter();
+            var mock = stub.AsMock();
+            var logger = new Logger(mock.Object);
+
+            // Act
+            logger.Write(42);
+
+            // Assert
+            mock.Verify(lw => lw.Write(It.IsInRange(40, 50)));
+        }
+
         // TODO ST: add test that fails!
 
         [Test]
@@ -66,11 +95,13 @@ namespace VerificationFakes.Samples.Tests
             var stub = new StubILogWriter();
             var mock = stub.AsMock();
             mock.Setup(lw => lw.Write(It.IsAny<string>()));
+            mock.Setup(lw => lw.Write(It.IsAny<int>()));
 
             var logger = new Logger(mock.Object);
 
             // Act
             logger.Write("Hello, logger!");
+            logger.Write(42);
 
             // Assert
             // We're not explicitly stated what we're expecting.
@@ -88,6 +119,8 @@ namespace VerificationFakes.Samples.Tests
 
             // Act
             var logger = new Logger(mock.Object);
+
+            logger.Write("Foo");
             // logger.Write will call logWriter.Write,
             // but we do not expect this, thats why logger.Write will fail!
             Assert.Throws<VerificationException>(() => logger.Write("Hello, Logger"));
