@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>VerificationFakes</id>
+    <version>0.5</version>
+    <title>Verification Fakes</title>
+    <authors>Sergey Teplyakov</authors>
+    <owners>Sergey Teplyakov</owners>
+    <licenseUrl>http://opensource.org/licenses/bsd-license.php</licenseUrl>
+    <projectUrl>https://github.com/SergeyTeplyakov/VerificationFakes</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Simple verification Moq-like library for Microsoft Fakes.</description>
+    <language>en-US</language>
+    <tags>tdd mocking mocks unittesting</tags>
+  </metadata>
+</package>

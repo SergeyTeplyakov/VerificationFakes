@@ -157,6 +157,9 @@
         <member name="F:VerificationFakes.Samples.Fakes.StubILoggerDependency.DefaultLoggerGet">
             <summary>Sets the stub of ILoggerDependency.get_DefaultLogger()</summary>
         </member>
+        <member name="F:VerificationFakes.Samples.Fakes.StubILoggerDependency.Foo">
+            <summary>Sets the stub of ILoggerDependency.Foo()</summary>
+        </member>
         <member name="M:VerificationFakes.Samples.Fakes.StubILoggerDependency.GetConfigValueOf1``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Func{``0})">
             <summary>Sets stubs of GetConfigValue()</summary>
         </member>
@@ -165,6 +168,9 @@
         </member>
         <member name="F:VerificationFakes.Samples.Fakes.StubILoggerDependency.GetDirectoryByLoggerNameString">
             <summary>Sets the stub of ILoggerDependency.GetDirectoryByLoggerName(String loggerName)</summary>
+        </member>
+        <member name="M:VerificationFakes.Samples.Fakes.StubILoggerDependency.VerificationFakes#Samples#ILoggerDependency#Foo">
+            <summary>Sets the stub of ILoggerDependency.Foo()</summary>
         </member>
         <member name="M:VerificationFakes.Samples.Fakes.StubILoggerDependency.VerificationFakes#Samples#ILoggerDependency#GetConfigValue``1">
             <summary>Sets the stub of ILoggerDependency.GetConfigValue()</summary>

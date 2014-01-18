@@ -17,6 +17,20 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Samples", "Samples", "{2A08
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VerificationFakes.Samples.Tests", "Samples\VerificationFakes.Samples.Tests\VerificationFakes.Samples.Tests.csproj", "{EA7BC289-E325-4C38-834B-E19BBB6AE757}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{857F1764-7FD9-442B-83A7-735CAF59E5ED}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Publishing", "Publishing", "{28E8BB7A-C3F9-4C40-94A8-56EA72F3CD8E}"
+	ProjectSection(SolutionItems) = preProject
+		Publishing\VerificationFakes.0.1.1.nupkg = Publishing\VerificationFakes.0.1.1.nupkg
+		Publishing\VerificationFakes.0.5.nupkg = Publishing\VerificationFakes.0.5.nupkg
+		Publishing\VerificationFakes.0.5.nuspec = Publishing\VerificationFakes.0.5.nuspec
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "content", "content", "{886911C3-C3D4-4B77-B342-3103BB882939}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,8 +62,9 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{10E30117-5580-451B-80A2-91F11D49D5B3} = {B7C513FC-B375-4CB1-8C2D-1EC07348C98A}
 		{85FE1323-5ECF-488F-B429-F75598B6991E} = {2A08806F-A1BB-48E9-ACA5-D639570B0B79}
 		{EA7BC289-E325-4C38-834B-E19BBB6AE757} = {2A08806F-A1BB-48E9-ACA5-D639570B0B79}
+		{10E30117-5580-451B-80A2-91F11D49D5B3} = {B7C513FC-B375-4CB1-8C2D-1EC07348C98A}
+		{886911C3-C3D4-4B77-B342-3103BB882939} = {28E8BB7A-C3F9-4C40-94A8-56EA72F3CD8E}
 	EndGlobalSection
 EndGlobal

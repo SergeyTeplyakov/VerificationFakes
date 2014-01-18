@@ -11,5 +11,7 @@ namespace VerificationFakes.Samples
         event EventHandler RollingRequired;
 
         T GetConfigValue<T>();
+
+        void Foo();
     }
 }
