@@ -2,7 +2,7 @@
 
 [Microsoft Fakes](http://msdn.microsoft.com/en-us/library/hh549175.aspx) is a great isolation framework that gives the user an ability to “fake” virtual method as well as non-virtual instance and static method. To distinguish two types of fakes Microsoft Fakes uses two different concepts – [stubs](http://msdn.microsoft.com/en-us/library/hh549174.aspx) and [shims](http://msdn.microsoft.com/en-us/library/hh549176.aspx): Stubs are uses for “faking” virtual method of the non-sealed classes or interfaces and Shims are uses for “faking” non-virtual instance method and static methods.
 
-Many other testing frameworks support two different kind of fakes as well: stubs – for state-based testing and mocks – for behavioral testing. In this case, stubs are used to “fake” return value for a particular polymorphic method to emulate desired state for the class under test. On the other hand, mocks are used to ensure that the class under test performs some operation and calsl the dependency under certain conditions.
+Many other testing frameworks support two different kind of fakes as well: stubs – for state-based testing and mocks – for behavioral testing. In this case, stubs are used to “fake” return value for a particular polymorphic method to emulate desired state for the class under test. On the other hand, mocks are used to ensure that the class under test performs some operation and calls the dependency under certain conditions.
 
 Unlike many other isolation frameworks, Microsoft Fakes focused primarily on state testing and provide limited support for behavioral testing. Behavioral testing using Microsoft Fakes limited by exposing `IStubObserver` property for every generated Stub. Unfortunately, this approach is tedious and cumbersome. Here is an example.
 Suppose we have `Logger` class that takes `ILogWriter` as a dependency in the constructor:
@@ -58,7 +58,7 @@ public void Logger_Write_Calls_For_Enter_Method()
     // Arrange
     var stub = new StubILogWriter();
     var customObserver = new CustomObserver();
-    // Указываем кастомный IStubObserver
+    // Set custom IStubObserver
     stub.InstanceObserver = customObserver;
  
     // Act
