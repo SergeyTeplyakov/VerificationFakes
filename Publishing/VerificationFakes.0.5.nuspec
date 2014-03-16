@@ -11,6 +11,10 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Simple verification Moq-like library for Microsoft Fakes.</description>
     <language>en-US</language>
-    <tags>tdd mocking mocks unittesting</tags>
+    <tags>tdd mocking mocks unittesting fakes shims stubs</tags>
   </metadata>
+  <files>
+    <file src="VerificationFakes.dll" target="lib\net45" />
+    <file src="VerificationFakes.xml" target="lib\net45" />
+  </files>
 </package>
