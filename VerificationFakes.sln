@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.30110.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VerificationFakes", "VerificationFakes\VerificationFakes.csproj", "{55CD643A-E464-4377-8F9F-1A92930A2ABF}"
 EndProject
@@ -28,8 +28,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Publishing", "Publishing", 
 		Publishing\VerificationFakes.0.5.nupkg = Publishing\VerificationFakes.0.5.nupkg
 		Publishing\VerificationFakes.0.5.nuspec = Publishing\VerificationFakes.0.5.nuspec
 	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "content", "content", "{886911C3-C3D4-4B77-B342-3103BB882939}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -65,6 +63,5 @@ Global
 		{85FE1323-5ECF-488F-B429-F75598B6991E} = {2A08806F-A1BB-48E9-ACA5-D639570B0B79}
 		{EA7BC289-E325-4C38-834B-E19BBB6AE757} = {2A08806F-A1BB-48E9-ACA5-D639570B0B79}
 		{10E30117-5580-451B-80A2-91F11D49D5B3} = {B7C513FC-B375-4CB1-8C2D-1EC07348C98A}
-		{886911C3-C3D4-4B77-B342-3103BB882939} = {28E8BB7A-C3F9-4C40-94A8-56EA72F3CD8E}
 	EndGlobalSection
 EndGlobal
